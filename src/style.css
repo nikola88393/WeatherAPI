@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    --bright-blue: #ebf2fa;
+    --dark-blue: #064789;
+    --medium-blue: #427aa1;
+    --shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 body{
@@ -9,37 +13,49 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--bright-blue);
 }
 #app-container{
-    border: 1px solid red;
+    color: var(--dark-blue);
+    background-color: var(--dark-blue);
+    /* border: 1px solid red; */
     /* height: 700px; */
     width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 20px; */
+    padding: 10px;
     gap: 10px;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
 }
 
-#location,#temp,#humidityAndWind{
+#location,#humidityAndWind{
     display: flex;
     padding: 10px;
     gap: 20px;
+    border-radius: 10px;
 }
 #location{
-    border: 1px solid red;
-    flex-direction: column;
+    /* border: 1px solid red; */
+    background-color: var(--medium-blue);
+    box-shadow: var(--shadow);
+    /* flex-direction: column; */
     align-items: center;
-    padding: 0;
+    /* padding: 0; */
     margin: 10px;
 }
 #location .locationHalf{
     border: none;
-    gap: none;
+    /* height: fit-content; */
+    height:max-content;
     width: 100%;
 }
 .locationHalf{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
     height: 100px;
     width: 50%;
     padding: 10px;
@@ -53,9 +69,40 @@ body{
     width: 100%;
     padding: 10px;
 }
+#conditionIcon{
+    border: none;
+    object-fit: containS;
+}
+#error{
+    color: var(--bright-blue);
+    display: flex;
+    justify-content: center;
+}
 h1{
-    color: blue;
+    color: var(--bright-blue)
 }
 .hidden{
     display: none;
+}
+.inputAndControls{
+    display: flex;
+    gap: 10px;
+}
+#locationInput{
+    height: 30px;
+    border: none;
+    padding: 5px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    color: var(--dark-blue);
+}
+button{
+    height: 30px;
+    border: none;
+    padding: 5px;
+    background-color: var(--bright-blue);
+    color: var(--dark-blue);
+    border: 2px solid var(--medium-blue);
+    border-radius: 5px;
+    cursor: pointer;
 }

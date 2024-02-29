@@ -8,22 +8,30 @@
   <body>
     <div id="app-container">
       <h1 id="class-title">Weather App</h1>
-      <input type="text" placeholder="Enter location here" id="locationInput" />
-      <button id="check-weather">Check weather</button>
-      <button id="changeMetrics">F/Mph</button>
+      <div class="inputAndControls">
+        <input
+          type="text"
+          placeholder="Enter location here"
+          id="locationInput"
+        />
+        <button id="check-weather">Check weather</button>
+        <button id="changeMetrics">F/Mph</button>
+      </div>
       <div id="weather-info">
         <p id="error"></p>
         <div id="location">
           <div class="locationHalf">
-            <img id="conditionIcon" width="80" height="80" src="" alt="" />
+            <img
+              id="conditionIcon"
+              width="64px"
+              height="64px"
+              src="https://img.icons8.com/ios/50/cloud--v1.png"
+              alt="cloud--v1"
+            />
             <p id="condition">Condition:</p>
-          </div>
-          <div class="locationHalf">
             <p id="region">Location:</p>
             <p id="localTime">Current time:</p>
           </div>
-        </div>
-        <div id="temp">
           <div class="locationHalf">
             <img
               width="40"
@@ -33,8 +41,6 @@
             />
             <p id="tempC">Temp:</p>
             <p id="tempF" class="hidden">Temp:</p>
-          </div>
-          <div class="locationHalf">
             <img
               width="40"
               height="40"
@@ -45,6 +51,10 @@
             <p id="feelslikeF" class="hidden">Feels like:</p>
           </div>
         </div>
+        <!-- <div id="temp">
+          <div class="locationHalf"></div>
+          <div class="locationHalf"></div>
+        </div> -->
         <div id="humidityAndWind">
           <div class="locationHalf">
             <img
