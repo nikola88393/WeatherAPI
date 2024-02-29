@@ -8,23 +8,64 @@
   <body>
     <div id="app-container">
       <h1 id="class-title">Weather App</h1>
-      <input type="text" placeholder="Enter location here" id="location" />
+      <input type="text" placeholder="Enter location here" id="locationInput" />
       <button id="check-weather">Check weather</button>
+      <button id="changeMetrics">F/Mph</button>
       <div id="weather-info">
         <p id="error"></p>
         <div id="location">
-          <p id="region">Location:</p>
-          <p id="localTime">Current time:</p>
-          <p id="condition">Condition:</p>
-          <img id="conditionIcon" src="" alt="" />
+          <div class="locationHalf">
+            <img id="conditionIcon" width="80" height="80" src="" alt="" />
+            <p id="condition">Condition:</p>
+          </div>
+          <div class="locationHalf">
+            <p id="region">Location:</p>
+            <p id="localTime">Current time:</p>
+          </div>
         </div>
         <div id="temp">
-          <p id="tempC">Temp:</p>
-          <p id="feelslikeC">Feels like:</p>
-          <p id="tempF">Temp:</p>
-          <p id="feelslikeF">Feels:</p>
+          <div class="locationHalf">
+            <img
+              width="40"
+              height="40"
+              src="https://img.icons8.com/ios/50/thermometer.png"
+              alt="thermometer"
+            />
+            <p id="tempC">Temp:</p>
+            <p id="tempF" class="hidden">Temp:</p>
+          </div>
+          <div class="locationHalf">
+            <img
+              width="40"
+              height="40"
+              src="https://img.icons8.com/ios/50/thermometer.png"
+              alt="thermometer"
+            />
+            <p id="feelslikeC">Feels like:</p>
+            <p id="feelslikeF" class="hidden">Feels like:</p>
+          </div>
         </div>
-        <p id="humidity">Humidity:</p>
+        <div id="humidityAndWind">
+          <div class="locationHalf">
+            <img
+              width="40"
+              height="40"
+              src="https://img.icons8.com/ios/50/wet.png"
+              alt="wet"
+            />
+            <p id="humidity">Humidity:</p>
+          </div>
+          <div class="locationHalf">
+            <img
+              width="40"
+              height="40"
+              src="https://img.icons8.com/ios/50/wind--v1.png"
+              alt="wind--v1"
+            />
+            <p id="windKph">Wind:</p>
+            <p id="windMph" class="hidden">Wind:</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>

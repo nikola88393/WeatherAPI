@@ -1,7 +1,7 @@
 // fetch weather data for a specific location using async function
-export default async function fetchWeatherData(Location) {
+export default async function fetchWeatherData(locationInput) {
   const response = await fetch(
-    `https://api.weatherapi.com/v1/current.json?key=48421e04842e4cbfa00194151240902&q=${Location}`,
+    `https://api.weatherapi.com/v1/current.json?key=48421e04842e4cbfa00194151240902&q=${locationInput}`,
     { mode: "cors" }
   );
 
@@ -25,6 +25,12 @@ export default async function fetchWeatherData(Location) {
   const feelslikeF = data.current.feelslike_f;
 
   const { humidity } = data.current;
+
+  const windKph = data.current.gust_kph;
+  const windMph = data.current.gust_mph;
+
+  console.log(data);
+
   return {
     condition,
     conditionIcon,
@@ -36,5 +42,7 @@ export default async function fetchWeatherData(Location) {
     tempF,
     feelslikeF,
     humidity,
+    windKph,
+    windMph,
   };
 }
